@@ -1,8 +1,36 @@
-body {
+body.light-mode {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    /* White background by default */
     margin: 0;
     padding: 0;
+}
+
+body.dark-mode {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    /* Dark background for dark mode */
+    color: #e0e0e0;
+    /* Light text for dark mode */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header in dark mode (applies when body has dark-mode) */
+body.dark-mode .header {
+    background-color: #050505;
+    /* dark header background */
+    color: #e0e0e0;
+    /* light text */
+}
+
+/* Links in header adapt automatically */
+body.dark-mode .header a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .header a:hover {
+    color: #bbbbbb;
 }
 
 a:visited {
@@ -13,16 +41,52 @@ a {
     color: black;
 }
 
+body.dark-mode a {
+    color: #e0e0e0;
+}
+
+body.dark-mode a:hover {
+    color: #bbbbbb;
+}
+
 a:hover {
     color: gray;
 }
 
+/* Header background in light mode */
 .header {
-    background-color: #f0f0f0;
+    background-color: #F5F5F5;
+    color: #000000;
     padding: 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Top row with h1 and toggle button */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    /* push h1 left, button right */
+    align-items: center;
+    /* vertically center */
+}
+#toggleBtn {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Toggle button in dark mode */
+body.dark-mode #toggleBtn {
+    background-color: #333333;
+    color: #e0e0e0;
 }
 
 .header-links {
@@ -31,12 +95,14 @@ a:hover {
     /* Space between links */
 }
 
+
 .content {
     margin: 20px;
     text-align: left;
 }
+
 .content a {
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .nav {
@@ -51,6 +117,14 @@ a:hover {
     font-weight: bold;
     font-style: italic;
 }
-.projects li + li { /* Selects every li that is preceded by another li */
-    margin-bottom:10px;
+
+.projects li+li {
+    /* Selects every li that is preceded by another li */
+    margin-bottom: 10px;
 }
+#icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
