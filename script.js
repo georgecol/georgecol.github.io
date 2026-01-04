@@ -1,7 +1,8 @@
 const body = document.body;
+const BASE_PATH = "/georgesite/";
 
 // Load shared header
-fetch("header.html")
+fetch(`/header.html`)
     .then(res => res.text())
     .then(data => {
         document.getElementById("shared-header").innerHTML = data;
@@ -9,7 +10,8 @@ fetch("header.html")
 
         initThemeToggle();
         initLastEdited();
-    });
+    })
+    .catch(err => console.error("Header load failed:", err));
 
 function initThemeToggle() {
     const toggleBtn = document.getElementById('toggleBtn');
