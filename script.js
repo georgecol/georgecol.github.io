@@ -1,5 +1,4 @@
 const body = document.body;
-const BASE_PATH = "/georgesite/";
 
 // Load shared header
 fetch(`/header.html`)
@@ -48,9 +47,6 @@ function updateIcons(mode, icon) {
 
 function initLastEdited() {
     const lastEdited = document.getElementById('lastedited');
-    const lastModified = document.lastModified;
-    const dateOnly = lastModified.toLocaleDateString();
-    if (lastEdited) {
-        lastEdited.textContent = `Last edited: ${dateOnly}`;
+        lastEdited.textContent = `Last edited: ${document.lastModified.toLocaleDateString}`;
     }
-}
+
