@@ -1,6 +1,5 @@
 ---
 id: index
-aliases:
 tags:
 date: 04-02-2026
 title: George Collier
