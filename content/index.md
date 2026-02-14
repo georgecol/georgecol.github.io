@@ -115,6 +115,9 @@ I have always been obsessed with computers, from the first time playing Minecraf
 
 I love to [[run]] and [[read]] non-fiction (history, science, and biographies).
 
+Stuff I'm busy with:
+- Learning #binaryexploitation through pico ctf's 
+ 
 
 
 

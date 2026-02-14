@@ -30,3 +30,4 @@ Save projects section
     \resumeSubHeadingListEnd
 ```
 
+![[public/attatchments/CV_GCollier_Feb_26.pdf|CV_GCollier_Feb_26]]
