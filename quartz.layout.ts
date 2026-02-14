@@ -1,5 +1,7 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import QuickLinks from "./quartz/components/QuickLinks"
+
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -9,6 +11,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/georgecol",
+      LinkedIn: "https://www.linkedin.com/in/george-collier-118aa2372/"
     },
   }),
 }
@@ -16,27 +19,26 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+    Component.Flex({
+      components: [
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+        { Component: Component.Search(), grow: true },
+      ],
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
+
+    // QuickLinks(),
     Component.Explorer(),
   ],
   right: [
@@ -48,8 +50,18 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Flex({
+      components: [
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+        { Component: Component.Search(), grow: true },
+      ],
+    }),
+    Component.ArticleTitle(),
+    Component.ContentMeta()],
   left: [
+    Component.Breadcrumbs(),
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({

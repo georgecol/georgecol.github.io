@@ -2,9 +2,10 @@
 id: index
 tags:
 date: 04-02-2026
-title: George Collier
+title: George Collier | Cybersecurity and Software Student
 updated: 04-02-2026
 class: navigation
+draft:
 ---
 
 <div>
@@ -108,15 +109,16 @@ class: navigation
 </div>
 
 --- 
+I'm a **final-year Computer Science student** majoring in [[Networking and CyberSecurity Major|Networks/Cybersecurity]] and[[Software Development Major|Software Development]]. 
 
-Hi, my my name is George, I'm a third year Computer Science student at the Auckland University of Technology where I focus on [[Networking and CyberSecurity Major|Networks/Cybersecurity]] and [[]]
+I have always been obsessed with computers, from the first time playing Minecraft in 2013, to 10 years later in 2023, when I decided to turn the obsession into a career. I am interested in low-level programming, web development, and home labbing (with future plans to build one). 
 
-
-
-
-
+I love to [[run]] and [[read]] non-fiction (history, science, and biographies).
 
 
 
 
-[[Thoughts/index|Thoughts]]　　　　[[Notes/index|Notes]]　　　　[[website|How to use]]
+
+
+
+
