@@ -1,0 +1,164 @@
+---
+topic:
+course:
+tags:
+  - ctf
+  - picoctf
+  - binaryexploitation
+  - heap
+  - complete
+created: 05-02-2026 20:55
+modified: 11 Feb 2026 @ 01:38 pm
+---
+![[Pasted image 20260205205536.png]]
+Hint and description.
+
+Hint is implying that the heap can overflow. see [[heap overflow]]
+
+Given source code:
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define FLAGSIZE_MAX 64
+// amount of memory allocated for input_data
+#define INPUT_DATA_SIZE 5
+// amount of memory allocated for safe_var
+#define SAFE_VAR_SIZE 5
+
+int num_allocs;
+char *safe_var;
+char *input_data;
+
+void check_win() {
+    if (strcmp(safe_var, "bico") != 0) {
+        printf("\nYOU WIN\n");
+
+        // Print flag
+        char buf[FLAGSIZE_MAX];
+        FILE *fd = fopen("flag.txt", "r");
+        fgets(buf, FLAGSIZE_MAX, fd);
+        printf("%s\n", buf);
+        fflush(stdout);
+
+        exit(0);
+    } else {
+        printf("Looks like everything is still secure!\n");
+        printf("\nNo flage for you :(\n");
+        fflush(stdout);
+    }
+}
+
+void print_menu() {
+    printf("\n1. Print Heap:\t\t(print the current state of the heap)"
+           "\n2. Write to buffer:\t(write to your own personal block of data "
+           "on the heap)"
+           "\n3. Print safe_var:\t(I'll even let you look at my variable on "
+           "the heap, "
+           "I'm confident it can't be modified)"
+           "\n4. Print Flag:\t\t(Try to print the flag, good luck)"
+           "\n5. Exit\n\nEnter your choice: ");
+    fflush(stdout);
+}
+
+void init() {
+    printf("\nWelcome to heap0!\n");
+    printf(
+        "I put my data on the heap so it should be safe from any tampering.\n");
+    printf("Since my data isn't on the stack I'll even let you write whatever "
+           "info you want to the heap, I already took care of using malloc for "
+           "you.\n\n");
+    fflush(stdout);
+    input_data = malloc(INPUT_DATA_SIZE);
+    strncpy(input_data, "pico", INPUT_DATA_SIZE);
+    safe_var = malloc(SAFE_VAR_SIZE);
+    strncpy(safe_var, "bico", SAFE_VAR_SIZE);
+}
+
+void write_buffer() {
+    printf("Data for buffer: ");
+    fflush(stdout);
+    scanf("%s", input_data);
+}
+
+void print_heap() {
+    printf("Heap State:\n");
+    printf("+-------------+----------------+\n");
+    printf("[*] Address   ->   Heap Data   \n");
+    printf("+-------------+----------------+\n");
+    printf("[*]   %p  ->   %s\n", input_data, input_data);
+    printf("+-------------+----------------+\n");
+    printf("[*]   %p  ->   %s\n", safe_var, safe_var);
+    printf("+-------------+----------------+\n");
+    fflush(stdout);
+}
+
+int main(void) {
+
+    // Setup
+    init();
+    print_heap();
+
+    int choice;
+
+    while (1) {
+        print_menu();
+	int rval = scanf("%d", &choice);
+	if (rval == EOF){
+	    exit(0);
+	}
+        if (rval != 1) {
+            //printf("Invalid input. Please enter a valid choice.\n");
+            //fflush(stdout);
+            // Clear input buffer
+            //while (getchar() != '\n');
+            //continue;
+	    exit(0);
+        }
+
+        switch (choice) {
+        case 1:
+            // print heap
+            print_heap();
+            break;
+        case 2:
+            write_buffer();
+            break;
+        case 3:
+            // print safe_var
+            printf("\n\nTake a look at my variable: safe_var = %s\n\n",
+                   safe_var);
+            fflush(stdout);
+            break;
+        case 4:
+            // Check for win condition
+            check_win();
+            break;
+        case 5:
+            // exit
+            return 0;
+        default:
+            printf("Invalid choice\n");
+            fflush(stdout);
+        }
+    }
+}
+
+```
+Upon inspection, we have to somehow write a certain value to the buffer, which in term overflows the allowed space of that pointer, and corrupts the safe variable. Which is checked in the check win function, if the variable is not equal to what it was initialised as, then it prints the flag.
+
+We can see that the size allocated for the input data is 5.
+So it copies via the [[strncpy]] function a maximum of 5 characters.
+Which we can see is  true because the safe var is the same, and has a length of 4 chars excluding the null terminator `/0`
+
+`How can we write to the buffer and disturb the safe variable?`
+
+
+![[Pasted image 20260205213607.png]]
+
+All we had to do, was enter a string long enough so that it overflows into the next address
+![[Pasted image 20260205213552.png]]
+this changing the value of bico to something else, and triggering the win condition once we selected value 4
+
+
