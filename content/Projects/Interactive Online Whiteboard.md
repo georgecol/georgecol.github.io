@@ -3,7 +3,8 @@ topic:
 date: 2026-02-14
 course:
 tags:
-  - university/projects/sdp
+  - projects/university/sdp
+  - Year2
 aliases:
 draft: false
 ---
