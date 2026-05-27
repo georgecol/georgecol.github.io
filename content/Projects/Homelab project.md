@@ -7,6 +7,7 @@ tags:
 aliases:
   - home labbing
   - home lab
+  - homelab
 draft: false
 ---
 ## Infrastructure

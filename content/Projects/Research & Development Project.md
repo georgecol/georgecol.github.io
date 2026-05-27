@@ -38,7 +38,7 @@ Decided by our network architect and technical lead.
 
 
 ## UI Design Sneak Peak
-One of many designs done by my teammate Angela.
+One of many designs done by my teammate Angela that our team have worked toward in many meetings with the client.
 The main nurse view for patient management.
 ![[Pasted image 20260527224139.png]]
 
