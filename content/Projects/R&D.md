@@ -39,9 +39,9 @@ Decided by our network architect and technical lead.
 
 ## Repositories
 3 repositories 
-https://github.com/BozhanL/rehua-api Backend
-https://github.com/BozhanL/rehua-web Frontend
-https://github.com/BozhanL/rehua-doc Documentation
+- https://github.com/BozhanL/rehua-api Backend
+- https://github.com/BozhanL/rehua-web Frontend
+- https://github.com/BozhanL/rehua-doc Documentation
 
 
 
