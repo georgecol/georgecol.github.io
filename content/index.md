@@ -109,7 +109,7 @@ draft:
 </div>
 
 --- 
-I'm a **final-year Computer Science student** majoring in [[Networking and CyberSecurity Major|Networks/Cybersecurity]] and [[Software Development Major|Software Development]]. 
+I'm a **final-year Computer Science student** majoring in [[Networks/Cybersecurity]] and [[Software Development]]. 
 
 I have always been obsessed with computers, from the first time playing Minecraft in 2013, to 10 years later in 2023, when I decided to turn the obsession into a career. I am interested in low-level programming, web development, and working on building a [[homelab]].
 

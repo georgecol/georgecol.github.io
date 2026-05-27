@@ -6,8 +6,7 @@
 
 ## Other
 - [[homelab]] - In Progress
-- [[Cryptography algorithm]]
-- 
+- [[Cryptography algorithm]|]
 
 
  find out more on: [[https://github.com/georgecol|github]] 
