@@ -1,12 +1,17 @@
 ---
 topic:
-date: "2026-05-27"
+date: 2026-05-27
 course:
 tags:
+  - "#Year3"
+  - "#NetworksCybersecurity"
 aliases:
-draft: true
+  - Highly Secure Systems
+draft: false
 ---
-# Content
+#### Note about course
+By far my favourite course this semester, very interesting to learn about the core encryption algorithms, and the origins of todays algorithms. The practical applications are also very interesting, SSH passwordless login, openssl toolkit, certificates, etc.
+# Brief Overview of Content
 
 ## Introduction & Classical Ciphers
 - CIA triad, nRAF, Kerckhoffs’s principle, confusion & diffusion.
@@ -18,16 +23,16 @@ draft: true
 - Stream ciphers use XOR; OTP secure with truly random non-reused keys.
 - Block modes: ECB, CBC, OFB, CFB, CTR; keystream generation via LFSR/CSPRNG.
 ## DES & 3DES
-- DES uses Feistel networks, permutations, S-boxes for confusion/diffusion.
-- DES has 56-bit keys; 3DES improves security (~112-bit effective key size).
+-  Feistel networks, permutations, S-boxes for confusion/diffusion.
+-  Key size and security for DES,2DES, and 3DES  (~112-bit effective key size).
 ## AES
 - Using polynomial arithmetic and S-box transformations.
-- AES rounds include substitution, diffusion, key addition, and key scheduling.
+- AES rounds: substitution, diffusion, key addition, and key scheduling.
 ## Hash Functions
 - Hashes provide integrity via pre-image, second pre-image, and collision resistance.
 - MD5/SHA-1, MAC/HMAC, salted passwords, birthday attack resistance
 ##  RSA
-- RSA uses public/private keys, Euler’s theorem, primes, and modular arithmetic.
+- Public/private keys, Euler’s theorem, primes, and modular arithmetic.
 - Applications: encryption, key exchange, digital signatures, non-repudiation.
 ##  DH & ECDH
 - DH/ECDH provide secure key exchange using DLP or elliptic curve mathematics.
