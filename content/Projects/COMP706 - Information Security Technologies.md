@@ -6,14 +6,20 @@ tags:
   - projects/university
   - Year2
 aliases:
+  - crypto alg
+  - comp607
+  - Cryptography algorithm
 draft: false
 ---
+## About the paper
 
-## About
+The curriculum of this paper covered almost all aspects of CompTIA Security +, the course book was Mark Campias CompTIA Security+ Guide to Network Security Fundamentals. With 2 practical assignments, the second being a vulnerability assessment of Windows Server and a Metasploitable instance through Kali Linux.
+
+## About  Assignment 1
 Although creation of proprietary cryptography algorithms is in no way best practice or advised.
-In my Information Security Management paper, we were tasked with building a cipher to showcase our knowledge in cryptography. 
+In my Information Security Technologies paper, we were tasked with building a cipher to showcase our knowledge in cryptography. 
 
-Coming into this assignment, I knew next to nothing about cryptography. This process definitely piqued my interest in the subject, hence why I chose to continue studying it in my final year, even though it is a paper notorious for being difficult.
+Coming into this assignment, I knew next to nothing about cryptography. This process definitely piqued my interest in the subject, hence why I chose to continue studying it in my final year, even though the final year paper is a paper which is notorious for being difficult. See [[COMP716]]
 
 **Implementation:**
 

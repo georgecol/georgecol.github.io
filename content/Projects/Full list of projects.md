@@ -1,12 +1,12 @@
 
 ## Software
-- [[R&D|R&D Project]] - In Progress
+- [[R&D Project]] - In Progress
 - [[Interactive Online Whiteboard]]
 - [[Hotel Booking System]]
 
 ## Other
 - [[homelab]] - In Progress
-- [[Cryptography algorithm]|]
+- [[Cryptography algorithm]]
 
 
  find out more on: [[https://github.com/georgecol|github]] 

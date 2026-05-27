@@ -118,7 +118,7 @@ I love to [[run]] and [[read]] in my spare time.
 Currently busy with:
 - Learning binary exploitation through pico ctf's 
 - Final year [[R&D Project]], developing a digital patient file management system for a community hospital.
-- Strengthening my skills in applied cryptography through [[Highly Secure Systems]]
+- Strengthening my skills in applied cryptography through [[COMP716]]
  
 
 

@@ -7,6 +7,7 @@ tags:
   - "#NetworksCybersecurity"
 aliases:
   - Highly Secure Systems
+  - COMP716
 draft: false
 ---
 #### Note about course
