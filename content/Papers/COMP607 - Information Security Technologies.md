@@ -5,6 +5,7 @@ course:
 tags:
   - projects/university
   - Year2
+  - NetworksCybersecurity
 aliases:
   - crypto alg
   - comp607
