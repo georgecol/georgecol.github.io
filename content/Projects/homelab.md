@@ -12,7 +12,7 @@ draft: false
 ## Infrastructure
 
 ### HP Z420
-I have recently purchased an old HP Z420 workstation and flashed it with proxmox, I am still deciding what I want to do with it. It may be useful to practice containers and docker for my [[Research & Development Project|R&D Project]], aswell as various cybersecurity labs in the future.
+I have recently purchased an old HP Z420 workstation and flashed it with proxmox, I am still deciding what I want to do with it. It may be useful to practice containers and docker for my [[R&D Project]], aswell as various cybersecurity labs in the future.
 **Specs**
 - CPU: Intel Xeon 2689 V1 8C 16T Base 2.6G
 - RAM: 32gb DDR3 1333mhz ECC 
