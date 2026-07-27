@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "georgecol.github.io",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian","attatchments","attachments"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
