@@ -44,9 +44,7 @@ The main nurse view for patient management.
 
 
 ## Repositories
-3 repositories 
-- https://github.com/BozhanL/rehua-api Backend
-- https://github.com/BozhanL/rehua-web Frontend
+- https://github.com/BozhanL/rehua Main
 - https://github.com/BozhanL/rehua-doc Documentation
 
 
