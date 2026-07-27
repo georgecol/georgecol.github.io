@@ -15,6 +15,9 @@ My first major at AUT, courses covered in this major include:
 - Information Security Technologies (Security + Curriculum)
 - Network Security
 - Highly Secure Systems - advanced cryptography
+- Enterprise Networks
+- Network Security
+- CyberOps Associate (voluntary course linked to Network Security)
 
 So far, I am thoroughly enjoying this major, it is both technically challenging and captures my interest about the underlying technology behind the internet.
 

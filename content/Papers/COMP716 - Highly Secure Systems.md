@@ -3,8 +3,9 @@ topic:
 date: 2026-05-27
 course:
 tags:
-  - "#Year3"
-  - "#NetworksCybersecurity"
+  - projects/university
+  - Year3
+  - NetworksCybersecurity
 aliases:
   - Highly Secure Systems
   - COMP716
