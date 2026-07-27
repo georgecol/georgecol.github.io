@@ -43,7 +43,7 @@ By far my favourite course this semester, very interesting to learn about the co
 - Digital signatures provide integrity, authenticity, and non-repudiation.
 - RSA, DSA, ElGamal, ECDSA used in PKI, session key exchange, and cryptocurrency.
 ##  System Security
-- AAA = Authentication, Authorization, Accounting; Kerberos and RADIUS are AAA systems.
+- AAA, Authentication, Authorisation, Accounting; Kerberos and RADIUS.
 - PKI, CA, X.509 certificates used in HTTPS, SSH, smart cards, and passports.
 ## Network Security
 - WLAN security: WEP < WPA < WPA2 < WPA3; enterprise auth uses 802.1X/EAP.
